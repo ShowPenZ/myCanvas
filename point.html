@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas创建一个圆点</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        /* height: 100%; */
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    canvas {
+        background: #000;
+    }
+</style>
+
+<body>
+    <canvas id='canvas4'></canvas>
+</body>
+
+</html>
+
+<script>    
+    var canvas4 = document.getElementById('canvas4');
+    var context4 = canvas4.getContext('2d');
+    canvas4.width = 400;
+    canvas4.height = 400;
+
+    //起始一条路径，或重置当前路径
+    context4.beginPath();
+    //context.arc(x,y,r,sAngle,eAngle,counterclockwise);
+    //x:圆的中心的 x 坐标。
+    //y:圆的中心的 y 坐标。
+    //r:圆的半径
+    //sAngle:起始角，以弧度计。（弧的圆形的三点钟位置是 0 度）。
+    //eAngle:结束角，以弧度计。
+    //counterclockwise:可选。规定应该逆时针还是顺时针绘图。False = 顺时针，true = 逆时针。
+    context4.arc(100, 100, 10, 0, Math.PI*2 , true);
+    //创建从当前点回到起始点的路径
+    context4.closePath();
+
+    context4.fillStyle = 'rgb(255,255,255)';
+    context4.fill();
+</script>
