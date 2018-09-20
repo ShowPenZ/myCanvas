@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>canvas绘制阴影</title>
+    <title>canvas绘制缩放</title>
 </head>
 <style>
     body {
@@ -44,12 +44,21 @@
     //当作cad来玩--------
     //当作cad来玩--------
 
+    context.strokeStyle = '#fff';
+    context.strokeRect(100, 100, 50, 50);
+    // scale() 方法之后在设置的矩形,
+    //无论是线条的宽度还是坐标的位置，都被放大了。
+    //并且 scale() 的效果是可以叠加的
+    context.scale(2, 2);
+    context.strokeRect(100, 100, 50, 50);
+    // context.strokeRect(100, 100, 100, 100);
 
-    //创建圆弧
-    context.arc(100, 100, 50, 0, Math.PI * 2, false);
-    context.fillStyle = '#fff'; //
-    context.shadowBlur = 20; // 阴影大小
-    context.shadowColor = 'red'; 
-    context.fill();
+
+
+
+
+
+
+
 
 </script>

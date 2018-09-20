@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>canvas绘制阴影</title>
+    <title>canvas绘制旋转</title>
 </head>
 <style>
     body {
@@ -35,7 +35,20 @@
     canvas4.height = 400;
 
     //起始一条路径，或重置当前路径
-    context.beginPath();
+    // context.beginPath();
+    context.fillStyle = 'white';
+    // context.rotate(angle)  angle = degreesMath.PI/180
+    //先绘制旋转在绘制矩形，之后----绘制的图形都会旋转 20°----。
+    context.rotate(Math.PI / 180 * -20);
+
+    context.fillRect(100, 100, 100, 100);
+
+
+
+
+
+
+
 
     //当作cad来玩--------
     //当作cad来玩--------
@@ -45,11 +58,13 @@
     //当作cad来玩--------
 
 
-    //创建圆弧
-    context.arc(100, 100, 50, 0, Math.PI * 2, false);
-    context.fillStyle = '#fff'; //
-    context.shadowBlur = 20; // 阴影大小
-    context.shadowColor = 'red'; 
-    context.fill();
+
+
+
+
+
+
+
+
 
 </script>

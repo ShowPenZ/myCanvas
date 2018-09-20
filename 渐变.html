@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>canvas绘制阴影</title>
+    <title>canvas绘制渐变</title>
 </head>
 <style>
     body {
@@ -45,11 +45,19 @@
     //当作cad来玩--------
 
 
-    //创建圆弧
-    context.arc(100, 100, 50, 0, Math.PI * 2, false);
-    context.fillStyle = '#fff'; //
-    context.shadowBlur = 20; // 阴影大小
-    context.shadowColor = 'red'; 
-    context.fill();
+    //创建线性渐变context.createLinearGradient(x0,y0,x1,y1)：
+    //x0：开始渐变的 x 坐标
+    //y0：开始渐变的 y 坐标
+    //x1：结束渐变的 x 坐标
+    //y1：结束渐变的 y 坐标
+    let grad = context.createLinearGradient(0, 0, 200, 200);
+    //绘制渐变对象中的颜色与停止位置
+    grad.addColorStop(0.7, 'red');
+    grad.addColorStop(1, 'green')
+    context.fillStyle = grad;
+    context.fillRect(100, 100, 200, 200);
+
+
+
 
 </script>
