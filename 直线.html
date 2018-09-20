@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas创建直线</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        /* height: 100%; */
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    canvas {
+        background: #000;
+    }
+</style>
+
+<body>
+    <canvas id='canvas4'></canvas>
+</body>
+
+</html>
+
+<script>    
+    var canvas4 = document.getElementById('canvas4');
+    var context = canvas4.getContext('2d');
+    canvas4.width = 400;
+    canvas4.height = 400;
+
+    //起始一条路径，或重置当前路径
+    context.beginPath();
+
+   //当作cad来玩
+   //moveTo 是在画布上选择一个点位
+    context.moveTo(50,50);
+    //添加一个新点，然后在画布中创建从该点到最后指定点的线条 
+    context.lineTo(100,100);
+    //属性设置或返回用于笔触的颜色、渐变或模式。
+    context.strokeStyle='#fff';
+    //stroke() 方法会实际地绘制出通过 moveTo() 和 lineTo() 方法定义的路径
+    context.stroke();
+    
+    
+</script>

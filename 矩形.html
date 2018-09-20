@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas绘制矩形</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        /* height: 100%; */
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    canvas {
+        background: #000;
+    }
+</style>
+
+<body>
+    <canvas id='canvas4'></canvas>
+</body>
+
+</html>
+
+<script>    
+    var canvas4 = document.getElementById('canvas4');
+    var context = canvas4.getContext('2d');
+    canvas4.width = 400;
+    canvas4.height = 400;
+
+    //起始一条路径，或重置当前路径
+    context.beginPath();
+
+    //当作cad来玩--------
+    //当作cad来玩--------
+    //当作cad来玩--------
+    //当作cad来玩--------
+    //当作cad来玩--------
+    //当作cad来玩--------
+
+    // 绘制矩形路径区域
+    context.fillStyle = '#fff';
+    //context.fillRect(x,y,width,height);
+    //x	矩形左上角的 x 坐标
+    //y	矩形左上角的 y 坐标
+    //width	矩形的宽度，以像素计
+    //height 矩形的高度，以像素计
+    context.fillRect(100, 100, 100, 100);
+
+    //context.strokeRect(x,y,width,height);
+    //x	矩形左上角的 x 坐标
+    //y	矩形左上角的 y 坐标
+    //width	矩形的宽度，以像素计
+    //height 矩形的高度，以像素计
+    //这个方法绘制矩形不填充颜色
+
+    context.strokeStyle = 'red';
+    context.strokeRect(200, 200, 100, 100);
+
+
+</script>
